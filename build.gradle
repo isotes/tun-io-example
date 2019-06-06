@@ -1,0 +1,31 @@
+plugins {
+	id 'application'
+}
+
+group 'io.github.isotes'
+version '1.0-SNAPSHOT'
+
+application {
+	mainClassName = 'io.github.isotes.net.tun.io.example.Main'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'io.github.isotes:tun-io'
+
+	implementation 'com.google.guava:guava:27.1-jre'
+	implementation 'info.picocli:picocli:3.9.6'
+	implementation 'org.zeroturnaround:zt-exec:1.10'
+	implementation 'org.slf4j:slf4j-jdk14:1.7.26'
+
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+
+	constraints {
+		implementation 'io.github.isotes:tun-io:1+'
+	}
+}
